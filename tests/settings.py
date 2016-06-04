@@ -170,3 +170,7 @@ JENKINS_TEST_RUNNER = 'django_jenkins.runner.CITestSuiteRunner'
 
 # django-ajax specific settings
 MAX_PER_PAGE = 20
+# Explicitly allow the deprecated SHA1 hasher to speed up tests
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.SHA1PasswordHasher',
+]
